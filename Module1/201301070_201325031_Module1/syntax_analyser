@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+rm -f *.o *.c *.h *.txt myparser
+bison -d -v bison.y
+
+flex flex.lex
+
+gcc -c bison.tab.c -o bison.o
+gcc -c lex.yy.c -o flex.o
+
+gcc flex.o bison.o -lfl -o myparser
+
+./myparser $1

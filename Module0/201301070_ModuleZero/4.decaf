@@ -1,0 +1,17 @@
+class Power
+{
+	int main()
+	{
+		int a,b,res;
+		res = 1;
+		callout("scanf", "%d%d", &a, & b);
+		while(b > 0)
+		{
+			if(b%2 == 1) res = (res*a);
+			a = a*a;
+			b = b/2;
+		}
+		callout("printf", "%d\n", res);
+		return 1;
+	}
+}
