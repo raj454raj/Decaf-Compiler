@@ -1,0 +1,58 @@
+class Program {
+
+  int testG, test_G_side;
+  int testG2;
+  boolean testGArray[10];
+
+  int testFactorial(int n) {
+    if(n == 1 || n == 0) {
+      return 1;
+    }
+    else {
+      return n * testFactorial(n - 1);
+    }
+  }
+
+  boolean testBooleanReturn(int b) {
+    boolean localA;
+    localA = false;
+    return localA;
+  }
+
+  void main() {
+    int localK;
+    int localB, localI;
+    int num;
+    localI = 3;
+    num = 5;
+    if(localI == 3) {
+        callout("printf", "Local variable assignment + Single if working!");
+    }
+    callout("printf", "Factorial of %d is: %d", num, testFactorial(num));
+
+    localI = num;
+    if(localI == 5) {
+        localI = 4;
+        if(localI == 4) {
+            localI = 1;
+            callout("printf", "Nested if working");
+        }
+        else {
+            callout("printf", "Nested else working");
+        }
+    }
+
+    if(localI == 2) {
+        callout("printf", "Never here!");
+    }
+    else {
+        callout("printf", "Nested else working");
+    }
+    for i = 0, i <= 6 {
+        callout("printf", "%d", testFactorial(i));
+        i = i + 1;
+    }
+    return;
+  }
+}
+

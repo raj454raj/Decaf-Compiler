@@ -1,0 +1,8 @@
+class Program {
+    void main() {
+        int A, B, res;
+        callout("scanf", "%d%d", &A, &B);
+        res = A^B;
+        callout("printf", "%d", res);
+    }
+}

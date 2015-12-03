@@ -1,0 +1,13 @@
+Running the file
+================
+
+Keep all files in one folder
+
+make clean
+make
+./syntax_analyzer test_program 2> IRout
+lli IRout
+
+or else just run
+
+./run.sh

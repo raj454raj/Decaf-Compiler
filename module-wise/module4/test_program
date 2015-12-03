@@ -1,0 +1,74 @@
+class Program {
+
+    int testG;
+    int testG2;
+    boolean b;
+    int testGArray[10];
+
+    int testFactorial(int n) {
+        if(n == 1 || n == 0) {
+            return 1;
+        }
+        else {
+            return n * testFactorial(n - 1);
+        }
+    }
+
+    boolean testBooleanReturn(int b) {
+        boolean localA;
+        localA = false;
+        localA = !localA;
+        testG = 10;
+        return localA;
+    }
+
+    void main() {
+        int localK;
+        int localB, localI;
+        int num, i;
+        localI = 3;
+        num = 5;
+        testGArray[0] = 1;
+        callout("printf", "Array location: %d", testGArray[0]);
+        if(localI == 3) {
+            callout("printf", "Local variable assignment + Single if working!");
+        }
+        callout("printf", "Factorial of %d is: %d", num, testFactorial(num));
+
+        localI = num;
+        if(localI == 5 && num == 5) {
+            localI = 4;
+            if(localI == 4) {
+                localI = 1;
+                callout("printf", "Nested if working\n");
+            }
+            else {
+                callout("printf", "Nested else working");
+            }
+        }
+
+        if(localI == 2) {
+            callout("printf", "Never here!");
+        }
+        else {
+            callout("printf", "Else working");
+        }
+        for i = 0, i <= 6 {
+            callout("printf", "%d", testFactorial(i));
+            i = i + 1;
+        }
+        if(testBooleanReturn(5) == false) {
+            callout("printf", "boolean negate not working");
+        }
+        else {
+            callout("printf", "boolean negate working");
+            num = -3;
+            callout("printf", "Unary minus working -> %d", num);
+            if(testG == 10) {
+                callout("printf", "Global variable update working");
+            }
+
+        }
+        return;
+    }
+}

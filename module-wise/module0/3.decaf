@@ -1,0 +1,9 @@
+class Program {
+    void main() {
+        int A;
+        callout("scanf", "%d", &A);
+        for int i = 1, 11 {
+            callout("printf", "%d x %d = %d\n", A, i, A*i);
+        }
+    }
+}

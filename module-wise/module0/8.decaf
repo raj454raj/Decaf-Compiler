@@ -1,0 +1,12 @@
+class Program {
+    void main() {
+        int A, B, C;
+        callout("scanf", "%d%d%d", &A, &B, &C);
+        if((A * A == B * B + C * C) || (B * B == C * C + A * A) || (C * C == A * A + B * B)) {
+            callout("printf", "Yes");
+        }
+        else {
+            callout("printf", "No");
+        }
+    }
+}
